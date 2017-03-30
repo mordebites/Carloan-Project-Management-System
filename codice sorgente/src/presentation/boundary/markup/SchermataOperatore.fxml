@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.markup.SchermataOperatore">
+   <children>
+      <ImageView fitHeight="63.0" fitWidth="70.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/car.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="91.0" layoutY="27.0" prefHeight="30.0" prefWidth="348.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="36.0" prefWidth="147.0" text="Operatore:" textFill="#d64933">
+               <font>
+                  <Font name="Helvetica" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameOperatore" prefHeight="30.0" prefWidth="139.0" text="Label" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Button fx:id="logOut" layoutX="822.0" layoutY="29.0" mnemonicParsing="false" onAction="#onLogOut" prefHeight="26.0" prefWidth="97.0" text="Log out" />
+      <Label layoutX="25.0" layoutY="100.0" text="Clienti">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="aggiungiCliente" layoutX="218.0" layoutY="102.0" mnemonicParsing="false" onAction="#onAggiungiCliente" text="Aggiungi" />
+      <Button fx:id="modificaCliente" layoutX="302.0" layoutY="102.0" mnemonicParsing="false" onAction="#onModificaCliente" prefHeight="26.0" prefWidth="77.0" text="Modifica" />
+      <AnchorPane layoutX="27.0" layoutY="136.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="354.0">
+         <children>
+            <TableView fx:id="clienti" prefHeight="200.0" prefWidth="354.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="idCliente" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="nomeCliente" prefWidth="75.0" text="Nome" />
+                  <TableColumn fx:id="cognomeCliente" prefWidth="75.0" text="Cognome" />
+                  <TableColumn fx:id="telefonoCliente" prefWidth="127.0" text="Numero telefono" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="25.0" layoutY="418.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="901.0">
+         <children>
+            <TableView fx:id="contratti" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="idContratto" prefWidth="34.0" text="ID" />
+                <TableColumn fx:id="dataInizioContratto" prefWidth="88.0" text="Data Inizio" />
+                  <TableColumn fx:id="dataLimiteContratto" prefWidth="83.0" text="Data Limite" />
+                  <TableColumn fx:id="accontoContratto" prefWidth="62.0" text="Acconto" />
+                  <TableColumn fx:id="baseContratto" prefWidth="91.0" text="Base" />
+                  <TableColumn fx:id="chilometraggioContratto" prefWidth="114.0" text="Chilometraggio" />
+                  <TableColumn fx:id="fasciaContratto" prefWidth="55.0" text="Fascia" />
+                  <TableColumn fx:id="luogoRestContratto" prefWidth="89.0" text="Luogo Rest" />
+                  <TableColumn fx:id="agenziaContratto" prefWidth="67.0" text="Agenzia" />
+                  <TableColumn fx:id="clienteContratto" prefWidth="58.0" text="Cliente" />
+                  <TableColumn fx:id="autoContratto" prefWidth="82.0" text="Auto" />
+                  <TableColumn fx:id="contrattoAperto" prefWidth="75.0" text="Aperto" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="27.0" layoutY="373.0" text="Contratti">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="modificaContratto" layoutX="385.0" layoutY="373.0" mnemonicParsing="false" onAction="#onModificaContratto" prefHeight="26.0" prefWidth="77.0" text="Modifica" />
+      <Button fx:id="eliminaContratto" layoutX="476.0" layoutY="373.0" mnemonicParsing="false" onAction="#onEliminaContratto" prefHeight="26.0" prefWidth="77.0" text="Elimina" />
+      <Button fx:id="aggiungiContratto" layoutX="302.0" layoutY="373.0" mnemonicParsing="false" onAction="#onAggiungiContratto" text="Aggiungi" />
+      <Button fx:id="chiudiContratto" layoutX="598.0" layoutY="373.0" mnemonicParsing="false" onAction="#onChiudiContratto" prefHeight="26.0" prefWidth="77.0" text="Chiudi" />
+      <Button fx:id="concordaRestituzione" layoutX="685.0" layoutY="373.0" mnemonicParsing="false" onAction="#onConcordaRestituzione" prefHeight="26.0" prefWidth="132.0" text="Concorda Restituzione">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="assegnaAuto" layoutX="825.0" layoutY="373.0" mnemonicParsing="false" onAction="#onAssegnaAuto" text="Assegna Auto" />
+      <Button fx:id="visualizzaContratto" layoutX="144.0" layoutY="373.0" mnemonicParsing="false" onAction="#onVisualizzaContratto" text="Visualizza selezionato" />
+      <Label layoutX="415.0" layoutY="100.0" text="Fasce">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="415.0" layoutY="136.0" prefHeight="200.0" prefWidth="237.0">
+         <children>
+            <TableView fx:id="fasce" prefHeight="189.0" prefWidth="237.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                  <TableColumn fx:id="idFascia" prefWidth="32.0" text="ID" />
+                <TableColumn fx:id="tipoFascia" prefWidth="44.0" text="Tipo" />
+                <TableColumn fx:id="descrizioneFascia" prefWidth="92.0" text="Descrizione" />
+                  <TableColumn fx:id="costoKmFascia" prefWidth="68.0" text="CostoKm" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="visualizzaFascia" layoutX="505.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVisualizzaFascia" text="Visualizza selezionata" />
+      <Label layoutX="668.0" layoutY="102.0" text="Modelli">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="668.0" layoutY="136.0" prefHeight="200.0" prefWidth="258.0">
+         <children>
+            <TableView fx:id="modelli" layoutX="6.0" prefHeight="200.0" prefWidth="258.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="idModello" prefWidth="54.0" text="ID" />
+                <TableColumn fx:id="nomeModello" prefWidth="132.0" text="Nome" />
+                  <TableColumn fx:id="fasciaModello" prefWidth="71.0" text="Fascia" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="575.0" layoutY="371.0" orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

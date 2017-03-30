@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.markup.SchermataPrincipale">
+   <children>
+      <Button fx:id="login" layoutX="126.0" layoutY="361.0" mnemonicParsing="false" onAction="#onLogin" text="Login" />
+      <Button fx:id="registrati" layoutX="201.0" layoutY="361.0" mnemonicParsing="false" onAction="#onRegistrati" text="Registrati" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="236.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@image/car.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="57.0" layoutY="244.0" prefHeight="88.0" prefWidth="286.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="109.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="177.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Username:" />
+            <Label text="Password:" GridPane.rowIndex="1" />
+            <TextField fx:id="username" GridPane.columnIndex="1" />
+            <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="124.0" layoutY="145.0" text="Carloan" textFill="#d64933">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
