@@ -8,6 +8,6 @@ Scopo dell'esame era realizzare un'applicazione gestionale per un autonoleggio u
 
 The repository contains the whole project for the Software Engineering exam at university, which includes source code, documentation and executable jar.
 
-Goal of the exam was to implement a management software for a car rental organization using software engineering principles and, especially, architectural and design patterns; in the project, *Front Controller*, *Application Controller*, *Transfer Object*, *Data Access Object* and *Command* were used, among the others.
+Goal of the exam was to implement a project management software for a car rental organization using software engineering principles and, especially, architectural and design patterns; in the project, *Front Controller*, *Application Controller*, *Transfer Object*, *Data Access Object* and *Command* were used, among the others.
 
 The documentation is in **Italian only**.
